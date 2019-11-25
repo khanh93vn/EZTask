@@ -7,7 +7,7 @@
 int log_in(char *usrn);
 
 int main() {
-    char username[32] = "test";
+    char username[32];
     
     if(log_in(username) == UNSUCCESSFUL) return -1;
     

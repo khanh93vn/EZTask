@@ -10,7 +10,7 @@
 #include <conio.h>
 #include <stdarg.h>
 
-#include "core.h"
+#include "task.h"
 #include "utils.h"
 
 // ---------------------------------------------------------------------------
@@ -22,7 +22,7 @@
 // ---------------------------------------------------------------------------
 // Function prototypes
 
-// I/O sub-function
+// I/O sub-functions
 void display_error(const char *error_text, const char *action);
 int input_integer(const char *format, ...);
 int input_yes_no(const char *format, ...);
