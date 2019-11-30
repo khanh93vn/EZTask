@@ -101,7 +101,7 @@ time_t input_date_time(time_t *t) {
     
     choice = input_integer(
         "Please enter target date, choose your method:\n"
-        "[1] Based on current time\n"
+        "[1] Based on current date\n"
         "[2] Manual entry\n"
         "[0] Cancel\n"
         "Your choice: ");
@@ -260,6 +260,7 @@ void main_menu(const char *user_name) {
             days_til_next_task = hours_til_next_task / HOURS_PER_DAY;
             hours_til_next_task %= HOURS_PER_DAY;
             weeks_til_next_task = days_til_next_task / DAYS_PER_WEEK;
+            days_til_next_task %= DAYS_PER_WEEK;
             
             printf("%s, coming in ", next_task->t_name);
             if(weeks_til_next_task)
@@ -274,7 +275,7 @@ void main_menu(const char *user_name) {
                 printf("%d hour%s ",
                        hours_til_next_task,
                        hours_til_next_task>1?"s":"");
-            printf("%d minute%s.",
+            printf("%d minute%s.\n",
                    minutes_til_next_task,
                    minutes_til_next_task>1?"s":"");
         } else printf("None\n");
